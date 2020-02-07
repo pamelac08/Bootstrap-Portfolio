@@ -2,10 +2,8 @@ body {
     width:960px;
     color: #777777;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
     background-image: url("../images/herringbone.png");
 }
-
 
 .navbar {
     background-color: #ffffff;
@@ -15,72 +13,90 @@ body {
 
 .navbar-brand {
     background-color: #4aaaa5;
-    color: white !important;
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     margin-left: 20px;
     padding: 20px;
-
 }
 
+.navbar-light .navbar-brand {
+    color: white;
+}
 
 .card {
     padding: 20px;
     margin-top: 150px;
-   
-    align-self: center;
+    max-width: 750px;
     margin-left: 20px;
-
+    margin-bottom: 40px;    /* I actually want the card for the main section to be separated from the bottom 
+                                regardless of size when you scroll all the way down - currently it is white 
+                                with no separation from the footer */
 }
-.card-body {
+#card-body-text {
     color: #4aaaa5;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-
 }
 
-.navbar-text {
+footer .navbar-text {
     background-color: #666666;
-    color: white !important;
+    color: white;
     border-top: 8px solid #4aaaa5;
     width: 100%;
-    text-align: center;
-
-    
+    text-align: center;   
 }
-.aboutmecard .card {
-    margin: 0;
-    width: 100%;
-
-}
-div.card.mb-3 {
-    margin-right: 0;
-    max-width: 980px !important;
-    
+footer .navbar-light .navbar-text {
+    color: white;
 }
 
-/*  need to figure out how to make text float around image when full screen */
-
-div.aboutmecard img {
+#profile-img {
     float: left;
-    height: 75%;
-    width: 75%;
+    height: 25%;
+    width: 25%;
+    margin-right: 10px;
 }
 
-
-/*  need to figure out how to target just text on picutres  --  and remove margin from "card" on individual pictures */
-.portfolioCards.card-text {
+.portfolioCards .card-img-overlay {
     background-color: #4aaaa5;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    top: 75%;
 }
 
-.portfolioCards.row.col.card {
-    margin: 0;
+
+
+
+@media screen and (max-width: 760px) {
+    body {
+        width: 100%;
+    }
+
+    .card,
+    form {
+        width: 100%;
+        margin-left: 0;
+        
+    }
 
 }
+
+@media screen and (max-width: 450px) {
+    #profile-img {
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+
+
+
+}
+
