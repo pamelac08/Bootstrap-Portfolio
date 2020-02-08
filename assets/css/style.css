@@ -29,9 +29,7 @@ body {
     margin-top: 150px;
     max-width: 750px;
     margin-left: 20px;
-    margin-bottom: 40px;    /* I actually want the card for the main section to be separated from the bottom 
-                                regardless of size when you scroll all the way down - currently it is white 
-                                with no separation from the footer */
+    margin-bottom: 40px;    
 }
 #card-body-text {
     color: #4aaaa5;
@@ -71,7 +69,9 @@ footer .navbar-light .navbar-text {
     top: 75%;
 }
 
-
+.row .bg-dark {
+    margin-top: 10px;
+}
 
 
 @media screen and (max-width: 760px) {
@@ -83,20 +83,15 @@ footer .navbar-light .navbar-text {
     form {
         width: 100%;
         margin-left: 0;
-        
     }
-
 }
 
-@media screen and (max-width: 450px) {
-    #profile-img {
+@media screen and (max-width: 576px) {
+    .card #profile-img {
         float: none;
         width: 100%;
         margin-bottom: 10px;
 
     }
-
-
-
 }
 
