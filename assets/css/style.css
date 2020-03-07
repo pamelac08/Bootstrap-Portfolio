@@ -73,6 +73,11 @@ footer .navbar-light .navbar-text {
     margin-top: 10px;
 }
 
+.img-fluid  {
+    width: 100%;
+    height: 200px;
+}
+
 
 @media screen and (max-width: 760px) {
     body {
